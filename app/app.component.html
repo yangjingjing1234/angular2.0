@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<my-hero-detail [hero]="selectedHero"></my-hero-detail>
+
+<pagination (list)="list($event)"></pagination>
+<!-- 把本地变量 (#pagecontent) 放到 (<pagination>) 标签中，
+用来代表子组件。这样父组件的模板就得到了子组件的引用，
+于是可以在父组件的模板中访问子组件的所有属性和方法。 -->

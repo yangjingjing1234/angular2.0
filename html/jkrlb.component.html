@@ -1,0 +1,91 @@
+
+  <!-- 右侧借款人列表 -->
+
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+      <!-- <div class="tabs-container">
+        <ul class="nav nav-tabs">
+          <li class="ctn-tab active-tab">
+            <a class="tab-link fa fa-file-o" title="借款人列表" routerLink="./jkrlb">
+              <span class="tab-name">借款人列表</span>
+            </a>
+          </li>
+        </ul>
+      </div> -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ibox float-e-margins">
+            <div class="ibox-content">
+              <div class="row">
+                <form  class="form-horizontal" >
+                  <div class="form-group">
+                    <label class="control-label col-sm-1 ">用户姓名：</label>
+                    <div class="col-sm-2">
+                      <input name="uname" class="form-control" type="text"></div>
+                    <label class="control-label col-sm-2 ">身份证号：</label>
+                    <div class="col-sm-2">
+                      <input name="idcard" class="form-control" type="text"></div>
+                    <label class="control-label col-sm-2 ">手机号：</label>
+                    <div class="col-sm-2">
+                      <input name="mobile" class="form-control" type="text"></div>
+                    <div class="col-sm-1">
+                    <!-- heroForm.form.pristine  表单没有使用则为true -->
+                    <!-- heroForm.form.dirty  表单或者输入框有使用则为true -->
+                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+                        <i class="fa fa-search"></i>查询</button>
+                    </div>
+                  </div>
+
+<div class="form-group">
+  <label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>
+    <div class="input-group date form_datetime col-md-5"  data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
+      <input class="form-control" size="16" type="text" value="" readonly>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+      <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+    </div>
+  <input type="hidden" id="dtp_input1" value="" /><br/>
+</div>
+
+                </form>
+              </div>
+              <table class="table table-bordered" id="editable">
+                <thead>
+                  <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>身份证号码</th>
+                    <th>手机号码</th>
+                    <th>所属盟商</th>
+                    <th>注册日期</th>
+                    <th>操作</th></tr>
+                </thead>
+                <tbody *ngIf="!nulldata">
+
+                  <tr 
+                   *ngFor="let hero of heroes"
+                    [class.selected]="hero === selectedHero"
+                    (click)="onSelect(hero)"
+                  >
+                    <td>{{hero.uname}}</td>
+                    <td>{{hero.sex}}</td>
+                    <td>{{hero.idcard}}</td>
+                    <td>{{hero.phoneNum}}</td>
+                    <td>{{hero.agentName}}</td>
+                    <td>{{hero.registerDate}}</td>
+                    <td>
+                      <a (click)="gotoDetail(hero)" title="查看">查看</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="row text-center" *ngIf="nulldata"> 暂无数据</p>
+
+              <div class="row text-center">
+                 <pagination (list)="list($event)"></pagination>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

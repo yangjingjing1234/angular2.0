@@ -1,0 +1,260 @@
+
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ibox float-e-margins">
+            <div class="ibox-content">
+              <table id="approveTable" class="table table-bordered table-hover ">
+                <thead>
+                  <tr>
+                    <th colspan="6">借款标信息</th>
+                    <th>用户头像</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label>流水编号</label></td>
+                    <td>{{herobiaodetail.baseInfo.serialNumber}}</td>
+                    <td>
+                      <label>标题</label></td>
+                    <td>{{herobiaodetail.baseInfo.title}}</td>
+                    <td>
+                      <label>借款人</label></td>
+                    <td>{{herobiaodetail.baseInfo.borrowUserName}}</td>
+                    <td width="160" rowspan="7" id="userPhoto">
+                      <div style="width:160px;">
+                        <img width="150" height="150" style="margin-bottom:5px;" id="headImage" src="img/a8.jpg">
+                      </div>
+                    <!--   <div class="tips">
+                        <img width="20"  src="../img/authen_idcard.jpg" id="idCard_image" title="身份证认证">
+                        <img width="20"  src="../img/nodegree.png" id="degree_image" title="学历认证">
+                        <img width="20"  src="../img/authen_mobile.jpg" id="mobile_image" title="手机认证">
+                        <img width="20"  src="../img/novideo.png" id="vedio_image" title="视频认证">
+                      </div> -->
+                      <!-- 历史统计 -->
+                      <div id="auditingHistoryInfo">
+                        <div id="badResult">
+                          <span>不良标数量:</span>
+                          <label>
+                            <font color="red">[ {{herobiaodetail.baseInfo.badTenderCount}} ]</font></label>
+                        </div>
+                        <div id="repayDebtResult">
+                          <span>未还的债务:</span>
+                          <label>
+                            <font color="red">[ {{herobiaodetail.baseInfo.unRepayDebtCount}} ]</font></label>
+                        </div>
+                        <div id="countResult">
+                          <span>申请标数量:</span>
+                          <label>
+                            <font color="red">[{{herobiaodetail.baseInfo.applyTenderCount}} ]</font></label>
+                        </div>
+                        <!-- <span>不良标数量:</span>&nbsp;&nbsp;<label> [无]</label><br><span>未还的债务:</span>&nbsp;&nbsp;<label><font color="red">[ 11 ]</font></label><br><span>申请标数量:</span>&nbsp;&nbsp;<label><a href="javascript:void(0)" onclick="findIdeaList(2,1024218)"><font color="red">[ 7 ]</font></a></label><br></div> -->
+                        <a style="display: none;" onclick="openTenderRecordHisDialog();" name="modfiyHis" id="modfiyHis" href="javascript:void(0)"></a>
+                        <br>
+                        <!-- 添加对话框Start -->
+                        <!-- 添加对话框End -->
+                        <!-- 修改对话框Start -->
+                        <form id="updateRecordForm"></form>
+                        <!-- 修改对话框End --></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>金额</label></td>
+                    <td>{{herobiaodetail.baseInfo.amount}}元</td>
+                    <td>
+                      <label>年利率</label></td>
+                    <td>{{herobiaodetail.baseInfo.annualInterestRate}}</td>
+                    <td>
+                      <label>借款期数</label></td>
+                    <td>{{herobiaodetail.baseInfo.issue}}</td></tr>
+                  <tr>
+                    <td>
+                      <label>借款类型</label></td>
+                    <td>{{herobiaodetail.baseInfo.borrowType}}</td>
+                    <td>
+                      <label>标模式</label></td>
+                    <td>{{herobiaodetail.baseInfo.targetModel}}</td>
+                    <td>
+                      <label>还款方式</label></td>
+                    <td>{{herobiaodetail.baseInfo.repaymentWays}}</td></tr>
+                  <tr>
+                    <td>
+                      <label>完成进度</label></td>
+                    <td>{{herobiaodetail.baseInfo.finishProgress}}</td>
+                    <td>
+                      <label>发布时间</label></td>
+                    <td>{{herobiaodetail.baseInfo.releaseTime}}</td>
+                    <td>
+                      <label>结束时间</label></td>
+                    <td>{{herobiaodetail.baseInfo.endTime}}</td></tr>
+                  <tr>
+                    <td>
+                      <label>详细描述</label></td>
+                    <td colspan="5">{{herobiaodetail.baseInfo.description}}</td></tr>
+                  <tr>
+                    <td>
+                      <label>配偶投保</label></td>
+                    <td>{{herobiaodetail.baseInfo.spouseInsure}}</td>
+                    <td>
+                      <label>配偶姓名</label></td>
+                    <td>{{herobiaodetail.baseInfo.spouseName}}</td>
+                    <td>
+                      <label>配偶证件号</label></td>
+                    <td>{{herobiaodetail.baseInfo.spouseIdcard}}</td></tr>
+                  <tr>
+                    <td>
+                      <label>借款区域</label></td>
+                    <td>{{herobiaodetail.baseInfo.borrowArea}}</td>
+                    <td>
+                      <label>标id</label></td>
+                    <td>{{herobiaodetail.baseInfo.targetId}}</td>
+                    <td colspan="2">
+                      <a href="download/dzjt.mht">电子借条</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ibox float-e-margins">
+            <div class="ibox-content">
+              <div class="row">
+                <div class="panel panel-default">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a data-toggle="tab" href="#tab-1">紧急联系人</a></li>
+                    <li class="">
+                      <a data-toggle="tab" href="#tab-2">还款计划</a></li>
+                    <li class="">
+                      <a data-toggle="tab" href="#tab-3">电访记录</a></li>
+                    <li class="">
+                      <a data-toggle="tab" href="#tab-4">审核记录</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover" id="editable">
+                          <thead>
+                            <tr>
+                              <th>联系人</th>
+                              <th>关系</th>
+                              <th>姓名</th>
+                              <th>手机号码</th>
+                              <th>使用人数</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let hero of herobiaodetail.emergencyContactList">
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.contacts}}</td>
+                              <td>{{hero.name}}</td>
+                              <td>{{hero.mobile}}</td>
+                              <td>{{hero.useCount}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover" id="editable1">
+                          <thead>
+                            <tr>
+                              <th>当前期</th>
+                              <th>实际还款日期</th>
+                              <th>还款日期</th>
+                              <th>状态</th>
+                              <th>金额</th>
+                              <th>剩余待还</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let hero of herobiaodetail.repaymentPlanList">
+                              <td>{{hero.curIssue}}</td>
+                              <td>{{hero.actualRepayDate}}</td>
+                              <td>{{hero.planRepayDate}}</td>
+                              <td>{{hero.status}}</td>
+                              <td>{{hero.amount}}</td>
+                              <td>{{hero.surplusAmount}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover" id="editable3">
+                          <thead>
+                            <tr>
+                              <th>序号</th>
+                              <th>联系人名称</th>
+                              <th>联系人类型</th>
+                              <th>联系人电话</th>
+                              <th>操作者</th>
+                              <th>操作时间</th>
+                              <th>联系人对用户的描述</th>
+                              <th>操作</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let hero of herobiaodetail.callVisitRecordList">
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.contactsName}}</td>
+                              <td>{{hero.contactsRelation}}</td>
+                              <td>{{hero.contactsMobile}}</td>
+                              <td>{{hero.operator}}</td>
+                              <td>{{hero.operatorTime}}</td>
+                              <td>{{hero.description}}</td>
+                              <td>
+                                <button class="fa fa-play-circle btn btn-outline btn-info">录音</button></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div id="tab-4" class="tab-pane">
+                      <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover" id="editable3">
+                          <thead>
+                            <tr>
+                              <th>意见人编号</th>
+                              <th>综合意见</th>
+                              <th>补充材料意见</th>
+                              <th>后续意见</th>
+                              <th>仅总部可见意见</th>
+                              <th>状态</th>
+                              <th>是否同意</th>
+                              <th>不同意类型</th>
+                              <th>时间</th>
+                              <th>角色</th>
+                              <th>帐号</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let hero of herobiaodetail.auditRecordList">
+                              <td>{{hero.opinionPersonNo}}</td>
+                              <td>{{hero.generalOpinion}}</td>
+                              <td>{{hero.supplementMaterialOpinion}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              <td>{{hero.id}}</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

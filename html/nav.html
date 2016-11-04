@@ -1,0 +1,158 @@
+<div id="wrapper" class='jkrWrapper'>
+     <nav class="col-sm-2 jkr_nav animated fadeInLeft" id="navbar-menu">
+      <ul>
+        <li class="nav_log">
+            <img src="img/logo.png" class="nav_log_img1">
+          <div class="nav_log_img2">
+             <img src="img/profile_small.png">
+          </div>
+          <div class='nav_name'>
+             <span> admin </span>
+             <div class="nav_name_list">
+                <p>超级管理员<b class="caret"></b></p>
+                <ol class="nav_name_info dropdown-menu">
+                  <li><a href="javascript:0">修改头像</a></li>
+                  <li><a href="javascript:0">个人资料</a></li>
+                  <li><a href="javascript:0">联系我们</a></li>
+                  <li><a href="javascript:0">信箱</a></li>
+                  <li><a href="javascript:0">安全退出</a></li>
+                </ol>
+             </div>
+          </div>
+        </li>
+       </ul>
+     <!-- 表单 -->
+     <div class="container-fluid">
+      <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle active1" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+               <p >
+                  <i class="fa fa-th-large"></i>主页
+                    <span class="fa fa-angle-left"></span>
+               </p>
+            </a>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+            <div class="accordion-inner active1">
+              <ol>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表</a>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表2</a>
+              </ol>
+            </div>
+          </div>
+        </div>
+         
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle active1" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+              <p >
+                <i class="fa fa-th-large"></i>主页
+                  <span class="fa fa-angle-left"></span>
+             </p>
+            </a>
+          </div>
+          <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner active1">
+              <ol>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表</a>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表2</a>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表</a>
+                      <a routerLink="./jkrlb" routerLinkActive="active">借款人列表2</a>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+       
+  </nav>
+    <div id="page-wrapper" style="margin: 0px; min-height: 100%" class="col-sm-10 gray-bg ">
+    <div class="row">
+          <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+              <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="javascript:;"><i class="fa fa-bars"></i> </a>
+
+            </div>
+
+            <div class="msg-marquee" id="sys-msg-marquee">
+              <ul class="marquee">
+               <li class="marquee-showing">您好1111111111111111</li>
+              </ul>
+            </div>
+
+            <!-- 电话条 -->
+
+           <!--  <div class="input-group input-group-sm margin phone_bar_input_call">
+                 <input name="input_phoneno" data-func="input_phoneno" class="form-control" type="text">
+                 <span class="input-group-btn">
+                      <a class="btn  btn-success btn-flat phone-btn disabled" data-action="make_call" data-func="call_btn" role="button">呼叫</a>
+                  </span>
+            </div>
+
+            <div id="softphone-bar" class="phoneBar">
+              <div class="btn-group seat_btn_group">
+
+                <a href="javascript:;" data-action="answer" class="btn btn-default  phone-btn btn-sm glyphicon glyphicon-earphone show disabled disabled_btn" role="button">应答</a>
+                <a href="javascript:p;" data-action="hangup" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-phone-alt show disabled disabled_btn" role="button">挂断</a>
+                <a href="javascript:phone.hold();" data-action="hold" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-pause show disabled disabled_btn" disabled_btn="" role="button">保持</a>
+                <a href="javascript:phone.unhold();" data-action="unhold" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-pause hidden " role="button">结束</a>
+
+                <a href="javascript:;" data-action="transfer" data-func="popWin" data-opt="transfer" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-transfer show disabled disabled_btn">转接</a>
+                <a href="javascript:;" data-action="consult" data-func="popWin" data-opt="consult" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-share-alt show disabled disabled_btn" role="button">咨询</a>
+                <a href="javascript:;" data-action="consult" data-func="popWin" data-opt="consult" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-plus show disabled disabled_btn" role="button">会议</a>
+                <a href="javascript:phone.stopConsult();" data-action="cancel_consult" class="btn btn-default phone-btn btn-sm glyphicon glyphicon-stop hidden " role="button">结束</a>
+                <button type="button" class="btn btn-default btn-sm peer_time_state" style="width:80px;" data-func="peer-time-state">00:00:00</button>
+
+                <div class="btn-group" style="top:1px;">
+                  <button type="button" class="btn btn-default btn-sm" style="width:80px;" data-func="phone-state">未连接</button>
+                  <button type="button" class="btn btn-default btn-sm dropdown-toggle " data-toggle="dropdown" data-func="status_select">
+                        <span class="caret"></span>
+                        <span class="sr-only"></span>
+                      </button>
+                  <ul class="dropdown-menu" role="menu" id="status_select">
+                    <li><a href="javascript:;" data-tid="0">置闲</a></li>
+                    <li><a href="javascript:;" data-tid="1">置忙</a></li>
+                    <li><a href="javascript:;" data-tid="2">小休</a></li>
+                    <li><a href="javascript:;" data-tid="3">会议</a></li>
+                    <li><a href="javascript:;" data-tid="4">午饭</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div> -->
+
+            <!--电话条-->
+
+            <ul class="nav navbar-top-links navbar-right">
+              <li>
+                <a href="javascript:;" routerLink="/login">
+                  <i class="fa fa-sign-out"></i> Log out
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+        <div class="ctn-container">
+          <ul class="nav nav-tabs" id="tabs-container">
+
+          <li class="ctn-tab ctn-link active-container" datatid="system-default" style="width: 120px;">
+             <a class="tab-link" title="系统管理"><span class="tab-name">系统管理</span></a>
+          </li>
+
+          <li style="width: 120px;" 
+            *ngFor="let list of tab_content"
+            >
+              <a class="tab-link" href="javascript:;" title="{{list.name}}" routerLink="{{list.url}}" routerLinkActive="active" >
+                <span class="tab-name">{{list.name}}</span></a>
+                <div class="close_btn" style="display: block;" (click)="delecttab(list.url)">
+                    <i class="fa fa-times"></i>
+                </div>
+          </li>
+          </ul>
+        </div>
+   <router-outlet [attr.tab_content]='tab_content' [attr.currenttabid]='currenttabid'></router-outlet>
+   <!-- 给子徐建传递 tab_content属性-->
+  </div>
+</div>

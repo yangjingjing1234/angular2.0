@@ -1,0 +1,228 @@
+.error-msg , .required-field{
+	color: red;
+}
+.required-field{
+      color:red;
+      width: 5px;
+      padding-left:0px;
+}
+
+.node-select{
+        padding-left: 0px;
+   }
+
+/*modal 样式*/
+
+.inmodal .modal-header{
+	padding: 10px 10px;
+	text-align: left;
+}
+
+.inmodal .modal-header .modal-title{
+  font-size: 18px;
+ }
+
+.ibox-title{
+	padding : 8px 6px 0px;
+	border-colcor: #1AB394;
+}
+.ibox-title h5{
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.ibox-title .btn-group{
+	float: right;
+	margin-right: 15px;
+}
+
+.ibox-tools a{
+	color: #ffffff;
+}
+
+.inmodal .modal-footer{
+	padding: 5px;
+}
+.inmodal label{
+	width:20%;
+	text-align: right;
+}
+
+.inmodal .form-control{
+    width:60%;
+}
+
+/*角色箭头*/
+.arrow-btn{
+    display: block;
+    width:65%;
+    height:14px;
+}
+.arrowL{
+    margin:14px 0 0 -10px;
+    background: url(../img/arrowL.png) no-repeat;
+}
+.arrowR{
+    margin:14px 0 0 -10px;
+    background: url(../img/arrowR.png) no-repeat;
+}
+
+
+.user_direct{
+    float: left;
+    position: absolute;
+   display: inline;
+    width: 100%;
+    text-align:center;
+    margin: 6px 0px;
+}
+/*标签页*/
+
+
+#container_wrapper .tabs-container {
+    background-color: #DDD;
+    border-bottom: 1px solid #fff;
+    height:36px;
+}
+.ctn-container li.ctn-tab, .tabs-container li.ctn-tab{
+  border: 1px solid #ddd;
+  height: 36px;
+  width: 120px;
+  background-color: #eee; 
+
+ 
+}
+
+.ctn-container li.ctn-tab{
+    margin-right: 5px;
+}
+
+.ctn-container .tab-link ,.tabs-container .tab-link{
+  padding: 7px 5px 8px 7px;
+  color: #000; 
+}
+.ctn-container .tab-link .tab-name,.tabs-container .tab-link .tab-name{
+  margin-left:5px;
+}
+
+
+.ctn-container .close_btn , .tabs-container .close_btn{
+  position: absolute;
+  float: right; 
+  top: 7px;
+  right: 5px;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+}
+.tabs-container li.active-tab{
+  border-top: 2px solid #1ab394;
+ 
+}
+
+.ctn-container li.active-container , .tabs-container li.active-container{
+  /*border-top: 2px solid #1ab394;*/
+ background-color: #1ab394;
+}
+
+.ctn-container li a:hover{
+  background-color: #1ab394;
+  color:#fff;
+}
+/*右键菜单样式*/
+.right_key {
+  width:72px;
+  height:30px;
+  border: #d9d9d9 solid 1px;
+  border-bottom: none;
+  background:#fff;
+  position:absolute;
+  left:150px;
+  z-index: 99999;
+}
+.right_key p{
+  margin: 0;
+  padding: 0;
+}
+.right_key a{
+  text-decoration:none;
+  display:inline-block;
+  height:30px;
+  line-height:30px;
+  width:72px;
+  text-align:center;
+  border-bottom: #d9d9d9 solid 1px;
+  font-size:12px;
+  color:#000;
+}
+.right_key a:hover, .show_table .select_contact{
+  background:#f7f1b7;
+}
+
+/*跑马灯*/
+.msg-marquee .marquee{
+  width:20%;
+  float:left;
+  border:0px;
+  margin-top:16px;
+ background-color:#f3f3f4;
+}
+.msg-marquee .marquee li{
+  padding-left: 30%;
+  font:14px sans-serif,Arial,Helvetica;
+
+}
+
+
+
+/*软电话条相关*/
+
+
+/*电话条样式调整*/
+
+.phone_bar_input_call{
+  float: left;
+  /*margin-left: 8%;*/ 
+  margin-top: 8px;
+  width:200px;
+
+}
+
+.phoneBar{
+  float: left;
+  margin-left: 5px; 
+}
+
+
+.phoneBar .peer_state{
+  float: right;
+  margin-top: 7px;
+  width: 80px;
+  text-align: center;
+  font-weight:bolder;
+  height: 30px;
+  margin-left: 2px;
+  border: 1px solid #B3ACAC;
+  background-color: #F7F6F6;
+}
+
+.phoneBar .peer_time_state, .phoneBar .peer_time_state:hover{
+    color:#1ab394;
+    font-weight: bold;
+
+}
+
+.phoneBar .agent_state{
+  float: right;
+  width:100px;
+  height: 31px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+
+
+
+
+
+

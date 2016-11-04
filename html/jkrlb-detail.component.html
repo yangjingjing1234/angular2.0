@@ -1,0 +1,268 @@
+<!-- 右侧借款人列表 -->
+
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-content">
+            <table id="approveTable" class="table table-bordered table-hover ">
+              <thead>
+                <tr>
+                  <th colspan="6" align="center">个人信息</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>姓名</label></td>
+                  <td>
+                    <div name="realNameAuth" id="realNameAuth">
+                      <span>{{herodetail.borrowUserBaseInfo.uname}}</span></div>
+                  </td>
+                  <td style="width:80px;">
+                    <label>手机号码</label></td>
+                  <td>
+                    <div name="mobileAuth" id="mobileAuth">
+                      <span>{{herodetail.borrowUserBaseInfo.phoneNum}}</span></div>
+                  </td>
+                  <td>
+                    <label>身份证号</label></td>
+                  <td>
+                    <div name="IdNumberAuth" id="IdNumberAuth">
+                      <span>{{herodetail.borrowUserBaseInfo.idcard}}</span></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>性别</label></td>
+                  <td>
+                    <div name="gender" id="gender">
+                      <span>{{herodetail.borrowUserBaseInfo.sex}}</span></div>
+                  </td>
+                  <td>
+                    <label>单位电话</label></td>
+                  <td>
+                    <div name="companyPhone" id="companyPhone">
+                      <span>{{herodetail.borrowUserBaseInfo.companyCall}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>单位名称</label></td>
+                  <td>
+                    <div name="companyName" id="companyName">
+                      <span>{{herodetail.borrowUserBaseInfo.companyName}}</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>年龄</label></td>
+                  <td>
+                    <div name="age" id="age">
+                      <span>{{herodetail.borrowUserBaseInfo.age}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>家庭电话</label></td>
+                  <td>
+                    <div name="phone" id="phone">
+                      <span>{{herodetail.borrowUserBaseInfo.homeCall}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>单位地址</label></td>
+                  <td>
+                    <div name="companyAddress" id="companyAddress">
+                      <span>{{herodetail.borrowUserBaseInfo.companyAddress}}</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>民族</label></td>
+                  <td>
+                    <div name="nationality" id="nationality">
+                      <span>{{herodetail.borrowUserBaseInfo.nation}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>电子邮件</label></td>
+                  <td>
+                    <div name="emailAuth" id="emailAuth">
+                      <span>{{herodetail.borrowUserBaseInfo.email}}</span></div>
+                  </td>
+                  <td>
+                    <label>现居住地</label></td>
+                  <td>
+                    <div name="address" id="address">
+                      <span>{{herodetail.borrowUserBaseInfo.homeAddress}}</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>户籍</label></td>
+                  <td>
+                    <div name="nativePlace" id="nativePlace">
+                      <span>{{herodetail.borrowUserBaseInfo.householdRegister}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>QQ号码</label></td>
+                  <td>
+                    <div name="qqNumber" id="qqNumber">
+                      <span>{{herodetail.borrowUserBaseInfo.qqNum}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>父母所在地</label></td>
+                  <td>
+                    <div name="parentAddress" id="parentAddress">
+                      <span>{{herodetail.borrowUserBaseInfo.parentAddress}}</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>从事行业</label></td>
+                  <td>
+                    <div name="companyIndustry" id="companyIndustry">
+                      <span>{{herodetail.borrowUserBaseInfo.industry}}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <label>个人描述</label></td>
+                  <td class="left" colspan="3">
+                    <div name="description" id="description">
+                      <span>{{herodetail.borrowUserBaseInfo.personalDescription}}</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>风险类别</label></td>
+                  <td colspan="5">
+                    <div name="riskLevel" id="riskLevel">
+                      <span>未知</span>（评分卡）</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>快捷查询</label></td>
+                  <td colspan="5">
+                    <a routerLink="/admin/order/{{herodetail.borrowUserBaseInfo.uid}}/1" class="btn btn-default">充值订单</a>
+                    <a routerLink="/admin/order/{{herodetail.borrowUserBaseInfo.uid}}/4" class="btn btn-default">认证信息</a>
+                   <!--  <a routerLink="/admin/order/{{herodetail.borrowUserBaseInfo.uid}}/2" class="btn btn-default">身份证认证记录查询</a> -->
+                    <a routerLink="/admin/order/{{herodetail.borrowUserBaseInfo.uid}}/3" class="btn btn-default">登录信息</a>
+                    <!-- <a routerLink="/order/{{herodetail.borrowUserBaseInfo.uid}}/3" class="btn btn-default">信用分值调整</a></td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ibox-content" style="margin-top: 10px;">
+            <table id="approveTable" class="table table-bordered table-hover ">
+              <thead>
+                <tr>
+                  <th colspan="6" align="center">资金信息</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>总资产</label></td>
+                  <td>{{herodetail.borrowUserFundsInfo?.totalAssets}}</td>
+                  <td>
+                    <label>账户可用余额</label></td>
+                  <td>{{herodetail.borrowUserFundsInfo?.collectPrincipal}}</td>
+                  <td>
+                    <label>冻结金额</label></td>
+                  <td>350</td></tr>
+                <tr>
+                  <td>
+                    <label>借款金额</label></td>
+                  <td>1222222</td>
+                  <td>
+                    <label>待还金额</label></td>
+                  <td>10000</td>
+                  <td>
+                    <label>已还金额</label></td>
+                  <td>266.00</td></tr>
+                   <tr>
+                  <td>
+                    <label>待还本金</label></td>
+                  <td>1222222</td>
+                  <td>
+                    <label>待还利息</label></td>
+                  <td>10000</td>
+                  <td>
+                    <label>逾期费用</label></td>
+                  <td>266.00</td></tr>
+                <tr>
+                  <td>
+                    <label>资金查询</label></td>
+                  <td colspan="5">
+                    <div class="btn-group">
+                      <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/1" class="btn btn-default">提现流水</a>
+                      <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/2" class="btn btn-default">充值流水</a>
+                      <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/3" class="btn btn-default">冻结流水</a>
+                      <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/4" class="btn btn-default">垫付流水</a>
+                    <!--   <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/5" class="btn btn-default">资金流水</a> -->
+                      <a routerLink="/admin/flowing/{{herodetail.borrowUserBaseInfo.uid}}/6" class="btn btn-default">银行卡查询</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ibox-content" style="margin-top: 10px;">
+            <h4>借款标信息</h4>
+            <div class="row">
+              <table class="table table-striped table-bordered table-hover" id="editable">
+                <thead>
+                  <tr>
+                    <th>序号</th>
+                    <th>借款标题</th>
+                    <th>借款人</th>
+                    <th>借款期数</th>
+                    <th>借款金额</th>
+                    <th>借款利率</th>
+                    <th>完成度</th>
+                    <th>还款方式</th>
+                    <th>借款类型</th>
+                    <th>是否逾期</th>
+                    <th>状态</th>
+                    <th>区域</th>
+                    <th>发布日期</th>
+                    <th>放款日期</th>
+                    <th>放款金额</th>
+                    <th>计息日期</th>
+                    <th>电子借条</th></tr>
+                </thead>
+                <tbody>
+                  <tr 
+                    *ngFor="let hero of herodetail.borrowUserBorrowTargetList"
+                  >
+                    <td>{{hero.id}}</td>
+                    <td>
+                      <a routerLink="/admin/jkrlb/{{herodetail.borrowUserBaseInfo.uid}}/{{hero.id}}">{{hero.title}}</a></td>
+                    <td>{{hero.borrowUserName}}</td>
+                    <td>{{hero.issue}}</td>
+                    <td>{{hero.amount}}</td>
+                    <td>{{hero.interestRate}}</td>
+                    <td>{{hero.CompletionDegree}}</td>
+                    <td>{{hero.RepaymentMethod}}</td>
+                    <td>{{hero.type}}</td>
+                    <th>{{hero.overdue}}</th>
+                    <td>{{hero.status}}</td>
+                    <td>{{hero.area}}</td>
+                    <td>{{hero.releaseDate}}</td>
+                    <td>{{hero.loanDate}}</td>
+                    <td></td>
+                    <td>{{hero.interestDate}}</td>
+                    <td><a href="download/11.pdf" target="_blank">xxx.pdf</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

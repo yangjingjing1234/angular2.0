@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <base href="/">
+    <title>Angular 2 QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> 
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="third-party/jquery-1.10.1.min.js"></script>
+    <script src="third-party/bootstrap.min.js"></script>
+    <script src="third-party/bootstrap-datetimepicker.min.js"></script>
+    <script src="third-party/bootstrap-datetimepicker.zh-CN.js"></script>
+ <!--    <script src="/third-party/metisMenu/hplus.min.js"></script> -->
+
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+     <!-- 公用样式 -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/navStyle.css" rel="stylesheet">
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+      // 如果想要更爱引入的文件夹在systemjs.config.js中更改
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <my-app><p style="text-align:center;color:#fff;margin-top:50px;font-size:20px;">加载中...</p></my-app>
+  </body>
+</html>

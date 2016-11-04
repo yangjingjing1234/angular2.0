@@ -1,0 +1,425 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="ibox float-e-margins">
+			<!-- 提现流水 -->
+				<div class="ibox-content" *ngIf="type==1">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号1</th>
+								<th>流水号</th>
+								<th>收入金额</th>
+								<th>支出金额</th>
+								<th>余额</th>
+								<th>创建时间</th>
+								<th>描述内容</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.serialNumber}}</td>
+								<td>{{hero.incomeAmount}}</td>
+								<td>{{hero.expenditureAmount}}</td>
+								<td>{{hero.balance}}</td>
+								<td>{{hero.createTime}}</td>
+								<td>{{hero.description}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					 <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div>
+				</div>
+				<!-- 提现流水 end -->
+				<div class="ibox-content" *ngIf="type==2">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号2</th>
+								<th>流水号</th>
+								<th>收入金额</th>
+								<th>支出金额</th>
+								<th>余额</th>
+								<th>创建时间</th>
+								<th>描述内容</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.serialNumber}}</td>
+								<td>{{hero.incomeAmount}}</td>
+								<td>{{hero.expenditureAmount}}</td>
+								<td>{{hero.balance}}</td>
+								<td>{{hero.createTime}}</td>
+								<td>{{hero.description}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					 <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div>
+				</div>
+				<!-- 充值流水 end -->
+				<div class="ibox-content" *ngIf="type==3">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号3</th>
+								<th>流水号</th>
+								<th>收入金额</th>
+								<th>支出金额</th>
+								<th>余额</th>
+								<th>创建时间</th>
+								<th>描述内容</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.serialNumber}}</td>
+								<td>{{hero.incomeAmount}}</td>
+								<td>{{hero.expenditureAmount}}</td>
+								<td>{{hero.balance}}</td>
+								<td>{{hero.createTime}}</td>
+								<td>{{hero.description}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					 <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div>
+				</div>
+				<!-- 冻结流水 -->
+				<div class="ibox-content" *ngIf="type==4">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号4</th>
+								<th>流水号</th>
+								<th>收入金额</th>
+								<th>支出金额</th>
+								<th>余额</th>
+								<th>创建时间</th>
+								<th>描述内容</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.serialNumber}}</td>
+								<td>{{hero.incomeAmount}}</td>
+								<td>{{hero.expenditureAmount}}</td>
+								<td>{{hero.balance}}</td>
+								<td>{{hero.createTime}}</td>
+								<td>{{hero.description}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					 <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div>
+				</div>
+				<!-- 垫付流水 -->
+				<div class="ibox-content" *ngIf="type==5">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号5</th>
+								<th>流水号</th>
+								<th>收入金额</th>
+								<th>支出金额</th>
+								<th>余额</th>
+								<th>创建时间</th>
+								<th>描述内容</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.serialNumber}}</td>
+								<td>{{hero.incomeAmount}}</td>
+								<td>{{hero.expenditureAmount}}</td>
+								<td>{{hero.balance}}</td>
+								<td>{{hero.createTime}}</td>
+								<td>{{hero.description}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					 <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div>
+				</div>
+				<!-- 资金流水 -->
+				<div class="ibox-content" *ngIf="type==6">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>查询条件</h5>
+							</div>
+							<div class="ibox-content">
+
+								<form  class="form-horizontal">
+									<div class="row">
+										
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5">流水号：</label>
+											<div class="col-sm-7">
+												<input type="text" name="serialNumber" class="form-control"/>
+											</div>
+										</div>
+
+										<div class="form-group col-sm-4">
+											<label class="control-label col-sm-5 ">创建时间：</label>
+											<div class="col-sm-7"> 
+											    <input type="text" name="createTime" class="form-control" />
+											</div>
+										</div>
+										<div class="col-sm-1">
+					                      <button type="button" class="btn btn-primary" [disabled]="submitted" (click)="onSubmit()">
+					                        <i class="fa fa-search"></i>查询</button>
+					                    </div>
+										
+
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<table class="table table-bordered" id="editable">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>卡类型</th>
+								<th>种类</th>
+								<th>卡号</th>
+								<th>开户省</th>
+								<th>开户市</th>
+								<th>支行名称</th>
+								<th>设置时间</th>
+								<th>最近操作时间</th>
+								<th>卡状态</th>
+							</tr>
+						</thead>
+						<tbody *ngIf="!nulldata">
+							<tr *ngFor="let hero of heroes">
+								<td>{{hero.id}}</td>
+								<td>{{hero.cardType}}</td>
+								<td>{{hero.cardUse}}</td>
+								<td>{{hero.cardNum}}</td>
+								<td>{{hero.province}}</td>
+								<td>{{hero.city}}</td>
+								<td>{{hero.branchBankName}}</td>
+								<td>{{hero.createTime}}</td>
+					            <td>{{hero.updateTime}}</td>
+					            <td>{{hero.status}}</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="row text-center" *ngIf="nulldata">暂无数据</p>
+					<!--  <div class="row text-center">
+		                 <pagination (list)="list($event)"></pagination>
+		              </div> -->
+				</div>
+				<!-- 银行卡查询 -->
+			</div>
+		</div>
+	</div>
+</div>
+
+

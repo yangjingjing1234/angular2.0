@@ -1,0 +1,68 @@
+
+.ctn-container li.ctn-tab, .tabs-container li.ctn-tab{
+  border: 1px solid #ddd;
+  height: 36px;
+  width: 120px;
+  background-color: #eee; 
+
+ 
+}
+
+.ctn-container li.ctn-tab{
+    margin-right: 5px;
+}
+
+.ctn-container .tab-link ,.tabs-container .tab-link{
+  padding: 7px 5px 8px 7px;
+  color: #000; 
+}
+.ctn-container .tab-link .tab-name,.tabs-container .tab-link .tab-name{
+  margin-left:5px;
+}
+
+
+.ctn-container .close_btn , .tabs-container .close_btn{
+  position: absolute;
+  float: right; 
+  top: 7px;
+  right: 5px;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+}
+.tabs-container li.active-tab{
+  border-top: 2px solid #1ab394;
+ 
+}
+
+.ctn-container li.active-container , .tabs-container li.active-container{
+  /*border-top: 2px solid #1ab394;*/
+ background-color: #1ab394;
+}
+
+.ctn-container li a:hover{
+  background-color: #1ab394;
+  color:#fff;
+}
+
+// 标签页end
+
+.tabs-container {
+    background-color: #DDD;
+    border-bottom: 1px solid #fff;
+    height: 36px;
+}
+.tabs-container .nav.nav-tabs li.ctn-tab{
+  border-right: 1px solid #ddd;
+  height: 36px;
+  background-color: #eee; 
+}
+.tabs-container .nav.nav-tabs li.ctn-tab a{
+  color:#000;
+}
+tr.selected{
+   background: #ccc;
+}
+.ibox-content .btn{
+	font-size: 13px;
+}

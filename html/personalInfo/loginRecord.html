@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>INSPINIA | Data Tables</title>
+
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<link href="../../css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+		<link href="../../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+		<link href="../../css/animate.css" rel="stylesheet">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/main.css" rel="stylesheet">
+
+		<style type="text/css">
+			div.dataTables_wrapper div.dataTables_info {
+				float: left;
+			}
+			
+			.ibox-tools a {
+				color: #fff;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+			<div id="page-wrapper" style="margin: 0;" class="gray-bg">
+
+				<div class="wrapper wrapper-content animated fadeInRight">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5>查询条件</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link btn btn-info btn-sm" role="button">
+											<i class="fa fa-chevron-up"></i> 展开
+										</a>
+
+									</div>
+								</div>
+								<div class="ibox-content">
+
+									<form action="media" method="get" id="queryForm" class="form-horizontal">
+										<div class="row">
+											
+											<div class="form-group">
+												<label class="control-label col-sm-1">登录会员：</label>
+												<div class="col-sm-3">
+														<input type="text" class="form-control"/>
+												</div>
+												<div class="col-sm-3">
+													<a href="javascript:;" role="button" class="btn btn-primary btn-sm ">
+														<i class="fa fa-search"></i> 查询
+													</a>
+												</div>
+											</div>
+
+
+
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="ibox float-e-margins">
+								<div class="ibox-content">
+									<table class="table table-striped table-bordered table-hover" id="editable">
+										<thead>
+											<tr>
+												<th>序号</th>
+												<th>登录会员</th>
+												<th>登录IP地址</th>
+												<th>登录区域</th>
+												<th>登录时间</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="gradeX">
+												<td>1</td>
+												<td>张姐艳</td>
+												<td>172.30.25.243</td>
+												<td>局域网 对方和您在同一内部网</td>
+												<td>2016-02-02 14：00：00</td>
+											</tr>
+											<tr class="gradeX">
+												<td>2</td>
+												<td>张姐艳</td>
+												<td>172.30.25.243</td>
+												<td>局域网 对方和您在同一内部网</td>
+												<td>2016-02-02 14：00：00</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mainly scripts -->
+		<script src="../../js/jquery-2.1.1.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+		<script src="../../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="../../js/plugins/jeditable/jquery.jeditable.js"></script>
+
+		<script src="../../js/plugins/dataTables/datatables.min.js"></script>
+		<script src="../../js/plugins/sweetalert/sweetalert.min.js"></script>
+
+		<!-- Custom and plugin javascript -->
+		<script src="../../js/inspinia.js"></script>
+		<script src="../../js/plugins/pace/pace.min.js"></script>
+		<script src="../../js/tipwin.js"></script>
+
+		<!-- Page-Level Scripts -->
+		<script>
+			$(document).ready(function() {
+				$('#editable').DataTable({
+					dom: '<"html5buttons"B>lTfgtip',
+					bSort: false,
+					bFilter: false,
+					buttons: [],
+					language: {
+						"sProcessing": "处理中...",
+						"sLengthMenu": "每页显示 _MENU_ 条",
+						"sZeroRecords": "没有匹配结果",
+						"sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+						"sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+						"sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+						"sInfoPostFix": "",
+						"sSearch": "搜索:",
+						"sUrl": "",
+						"sEmptyTable": "表中数据为空",
+						"sLoadingRecords": "载入中...",
+						"sInfoThousands": ",",
+						"oPaginate": {
+							"sFirst": "首页",
+							"sPrevious": "上页",
+							"sNext": "下页",
+							"sLast": "末页"
+						}
+					}
+
+				});
+
+				//  $('#mainDialog').on("show.bs.modal",function(event){
+				//      var btn = $(event.relatedTarget);
+				//      var content = $(this).find('[data-name="content-body"]');
+				//      var fuc = btn.data("func");
+				//      var _url = btn.data("url");
+				//      if(fuc && fuc=="showDetail"){
+				//           $.get(_url).done(function(_html){
+				//             content.html(_html);
+				//          }); 
+				//      }
+				//  }).on('hidden.bs.modal', function (e) {
+				//      $('.modal-content',$(this)).empty();
+				// }); 
+
+				$('#mainDialog').on('hidden.bs.modal', function(e) {
+					$('.modal-content', $(this)).empty();
+				});
+
+				var F = new TipWin();
+				$('a[data-func="delete"]').click(function() {
+					F.confirm("是否确认删除", null, function(isConfirm) {
+						if(isConfirm) F.alert("删除成功", " ", "success");
+					});
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>
